@@ -30,6 +30,7 @@ gem "jbuilder"
 gem "redis", ">= 4.0.1"
 gem 'sidekiq', '~> 8.0', '>= 8.0.1'
 gem 'foreman', '~> 0.88.1'
+gem 'byebug'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
