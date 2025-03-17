@@ -3,6 +3,7 @@ class SendEmailJob
   sidekiq_options retry: 2 # Only 2 retries and then to the Dead Job Queue
 
   def perform(email)
-    WelcomeMailer.with(email: email).welcome_email.deliver_now
+    email_to_deliver = WelcomeMailer.with(email: email).welcome_email
+    email_to_deliver.deliver_now!
   end
 end

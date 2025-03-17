@@ -73,4 +73,13 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: ENV["MAIL_PORT"],
+    user_name: ENV["MAIL_USER"],
+    password: ENV["MAIL_PASSWORD"],
+    tls: true
+  }
 end
