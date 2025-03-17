@@ -1,24 +1,32 @@
-# README
+# My Rails Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails-based web application. Below are the steps to set up and run the application locally.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+Ensure you have the following installed on your machine:
+- Ruby
+- Rails
+- Sqlite3 (or your preferred database)
+- Redis
+- Sidekiq
 
-* System dependencies
+## Setup Instructions
+```bash
+bundle install
+```
+## Setup the Database 
+```bash
+rails db:create
+rails db:migrate
+```
 
-* Configuration
+## Copy the example environment file
+```bash
+cp .env.example .env
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## To start all services with foreman, run the following
+```bash
+foreman start
+```
